@@ -1,0 +1,38 @@
+status-card section {
+  border: 1px solid black;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 5px;
+  position: relative;
+}
+
+status-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+status-card img {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+status-card h1 {
+  text-align: center;
+}
+
+status-card section.none {
+  background-color: lightgreen;
+}
+
+status-card section:hover {
+  box-shadow: 2px 3px 119px -28px rgba(0,0,0,0.47);
+}
+
+status-card section.minor {
+  background-color: orange;
+}
+status-card section.major {
+  background-color: red;
+  color: white;
+}

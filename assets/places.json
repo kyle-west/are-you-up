@@ -1,0 +1,18 @@
+{
+  "GitHub": {
+    "status-url": "https://www.githubstatus.com/api/v2/status.json",
+    "icon-url": "https://github.com/favicon.ico"
+  },
+  "TravisCI": {
+    "status-url": "https://www.traviscistatus.com/api/v2/status.json",
+    "icon-url": "https://cdn.travis-ci.com/images/favicon.png"
+  },
+  "NPM": {
+    "status-url": "https://status.npmjs.org/api/v2/status.json",
+    "icon-url": "https://static.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png"
+  },
+  "SauceLabs": {
+    "status-url": "https://status.saucelabs.com/api/v2/status.json",
+    "icon-url": "https://cdn1.saucelabs.com/web-ui/images/favicons-5170fb6ffc3ddc8af41eab05567c6ad1/favicon-32x32.png"
+  }
+}
