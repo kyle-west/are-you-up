@@ -1,5 +1,5 @@
 async function fetchAll () {
-  let places = await fetch('/assets/places.json').then(r=>r.json());
+  let places = await fetch('./assets/places.json').then(r=>r.json());
   html = "";
   JSON.stringify(places);
   for (place in places) {
