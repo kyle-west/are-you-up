@@ -9,3 +9,5 @@ file holds the config for what services to listen to. It requires that the servi
 has an implementation of the [StatusPage.io v2 API](https://help.statuspage.io/knowledge_base/topics/api-information).
 
 This is under an MIT licence. Feel free to fork this repo and add your own services!
+
+Checkout the current [Status Page](https://kyle-west.github.io/are-you-up/)!

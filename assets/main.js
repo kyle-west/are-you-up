@@ -24,7 +24,14 @@ function updateTitle () {
       struggling.push(company);
     }
   }
-  let title = struggling.length ? "Some Systems are Reporting Problems (" + struggling.join(" | ") + ")": "All Systems Reporting Positive";
+
+  let title = "All Systems Reporting Positive";
+  let favicon = "up"; 
+  if (struggling.length) {
+    title = "Some Systems are Reporting Problems (" + struggling.join(" | ") + ")";
+    favicon = "down";
+  }
   document.title = title;
   document.getElementById('title').innerHTML = title;
+  document.getElementById('favicon').href = `./assets/images/${favicon}.png`;
 }
