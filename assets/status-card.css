@@ -21,12 +21,15 @@ status-card h1 {
   text-align: center;
 }
 
+status-card section:hover {
+  box-shadow: 2px 3px 119px -28px rgba(0,0,0,0.47);
+}
+
 status-card section.none {
   background-color: lightgreen;
 }
-
-status-card section:hover {
-  box-shadow: 2px 3px 119px -28px rgba(0,0,0,0.47);
+status-card section.maintenance {
+  background-color: lightgrey;
 }
 
 status-card section.minor {
