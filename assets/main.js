@@ -31,7 +31,30 @@ function updateTitle () {
     title = "Some Systems are Reporting Problems (" + struggling.join(" | ") + ")";
     favicon = "down";
   }
+
+  notifyUserOfChanges(document.title, title, favicon, struggling);
+
   document.title = title;
   document.getElementById('title').innerHTML = title;
   document.getElementById('favicon').href = `./assets/images/${favicon}.png`;
+
+}
+
+function notifyUserOfChanges (currentTitle, newTitle, favicon, struggling) {
+  if (currentTitle !== newTitle) {
+    let message = newTitle;
+    if (struggling.length) {
+      let del = struggling.length > 1 ? "are" : "is";
+      message = struggling.join(", ") + ` ${del} Reporting Problems`;
+    }
+    Notification.requestPermission().then((result) => {
+      console.log("Permission to Notify:", result);
+      if (result === 'granted') {
+        window.lastNotification = new Notification("Are You Up?", {
+          body: message,
+          icon: `https://kyle-west.github.io/are-you-up/assets/images/${favicon}.png`
+        });
+      }
+    });
+  }
 }
