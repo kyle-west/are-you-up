@@ -19,7 +19,7 @@ class StatusCard extends HTMLElement {
     fetch(this.statusUrl).then(r=>r.json()).then(data => {
       this.company = data.page.name;
       this.status = data.status.indicator;
-      this.innerHTML = `<a href="${this.navigateUrl}">
+      this.innerHTML = `<a href="${this.navigateUrl}" target="_blank">
         <section class="${this.status}">
         <img src="${this.iconUrl}"/>
         <h1>${this.company}</h1>

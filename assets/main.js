@@ -40,7 +40,11 @@ function updateTitle () {
 
 }
 
-function notifyUserOfChanges (currentTitle, newTitle, favicon, struggling) {
+
+// Test with to following calls:
+//    notifyUserOfChanges('All Systems Reporting Positive', 'All Systems Reporting Positive', 'Up', [])
+//    notifyUserOfChanges('All Systems Reporting Positive', 'Some Systems are Reporting Problems (GitHub)', 'down', ['GitHub'])
+window.notifyUserOfChanges = (currentTitle, newTitle, favicon, struggling) => {
   if (currentTitle !== newTitle) {
     let message = newTitle;
     if (struggling.length) {
@@ -50,9 +54,9 @@ function notifyUserOfChanges (currentTitle, newTitle, favicon, struggling) {
     Notification.requestPermission().then((result) => {
       console.log("Permission to Notify:", result);
       if (result === 'granted') {
-        window.lastNotification = new Notification("Are You Up?", {
-          body: message,
-          icon: `https://kyle-west.github.io/are-you-up/assets/images/${favicon}.png`
+        window.lastNotification = new Notification(message, {
+          icon: `https://kyle-west.github.io/are-you-up/assets/images/${favicon}.png`,
+          image: `https://kyle-west.github.io/are-you-up/assets/images/${favicon}.png`
         });
       }
     });
