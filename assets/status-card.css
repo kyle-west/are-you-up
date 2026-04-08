@@ -1,44 +1,138 @@
-status-card section {
-  border: 1px solid black;
-  padding: 15px;
-  margin: 15px;
-  border-radius: 5px;
-  position: relative;
+status-card {
+  display: block;
 }
 
 status-card a {
   text-decoration: none;
   color: inherit;
+  display: block;
 }
 
-status-card img {
+status-card section {
+  background: linear-gradient(135deg, #2a2d3a 0%, #3a3145 100%);
+  border-radius: 16px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+status-card section::before {
+  content: '';
   position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-}
-
-status-card h1 {
-  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  transition: all 0.3s ease;
 }
 
 status-card section:hover {
-  box-shadow: 2px 3px 119px -28px rgba(0,0,0,0.47);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
-status-card section.none {
-  background-color: lightgreen;
-}
-status-card section.maintenance {
-  background-color: lightgrey;
+status-card img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 8px;
 }
 
-status-card section.minor {
-  background-color: orange;
+status-card h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #f7fafc;
+  letter-spacing: -0.01em;
 }
-status-card section.major {
-  background-color: red;
-  color: white;
+
+status-card .data {
+  margin-top: auto;
+}
+
+status-card h3 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  line-height: 1.5;
+}
+
+status-card p {
+  font-size: 0.75rem;
+  color: #a0aec0;
+  margin-top: 0.5rem;
+}
+
+status-card code {
+  font-family: 'SF Mono', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+  font-size: 0.7rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+  color: #cbd5e0;
+}
+
+/* Status-specific styles */
+status-card section.none::before {
+  background: linear-gradient(90deg, #48bb78, #38a169);
+}
+
+status-card section.none h3 {
+  background: rgba(72, 187, 120, 0.15);
+  color: #9ae6b4;
+}
+
+status-card section.maintenance::before {
+  background: linear-gradient(90deg, #718096, #4a5568);
+}
+
+status-card section.maintenance h3 {
+  background: rgba(113, 128, 150, 0.15);
+  color: #cbd5e0;
+}
+
+status-card section.minor::before {
+  background: linear-gradient(90deg, #ed8936, #dd6b20);
+}
+
+status-card section.minor h3 {
+  background: rgba(237, 137, 54, 0.15);
+  color: #fbd38d;
+}
+
+status-card section.major::before {
+  background: linear-gradient(90deg, #f56565, #e53e3e);
+}
+
+status-card section.major h3 {
+  background: rgba(245, 101, 101, 0.15);
+  color: #fc8181;
+}
+
+@media (max-width: 768px) {
+  status-card section {
+    padding: 1.25rem;
+    min-height: 140px;
+  }
+
+  status-card h1 {
+    font-size: 1.125rem;
+  }
+
+  status-card img {
+    width: 36px;
+    height: 36px;
+  }
 }
