@@ -12,7 +12,11 @@
     "icon-url": "./assets/images/logos/npm.png"
   },
   "SauceLabs": {
-    "status-url": "https://status.us-west-1.saucelabs.com/api/v2/status.json",
+    "status-url": "https://status.saucelabs.com/api/v2/status.json",
     "icon-url": "./assets/images/logos/saucelabs.png"
+  },
+  "Heroku": {
+    "status-url": "https://status.heroku.com/api/v3/current-status",
+    "icon-url": "./assets/images/logos/heroku.ico"
   }
 }

@@ -3,7 +3,7 @@ async function fetchAll () {
   html = "";
   JSON.stringify(places);
   for (place in places) {
-    html += `<status-card status-url="${places[place]['status-url']}" icon-url="${places[place]['icon-url']}"></status-card>`;
+    html += `<status-card name="${place}" status-url="${places[place]['status-url']}" icon-url="${places[place]['icon-url']}"></status-card>`;
   }
   document.getElementById('statuses').innerHTML = html;
 }
