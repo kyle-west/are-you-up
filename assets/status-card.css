@@ -39,11 +39,16 @@ status-card section:hover {
 }
 
 status-card img {
-  width: 40px;
-  height: 40px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
   margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 8px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 status-card h1 {
@@ -52,6 +57,7 @@ status-card h1 {
   margin-bottom: 0.75rem;
   color: #f7fafc;
   letter-spacing: -0.01em;
+  text-align: center;
 }
 
 status-card .data {
@@ -132,7 +138,7 @@ status-card section.major h3 {
   }
 
   status-card img {
-    width: 36px;
-    height: 36px;
+    width: 56px;
+    height: 56px;
   }
 }

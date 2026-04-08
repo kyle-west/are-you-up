@@ -3,20 +3,24 @@
     "status-url": "https://www.githubstatus.com/api/v2/status.json",
     "icon-url": "./assets/images/logos/github.ico"
   },
-  "TravisCI": {
-    "status-url": "https://www.traviscistatus.com/api/v2/status.json",
-    "icon-url": "./assets/images/logos/travis-ci.png"
-  },
   "NPM": {
     "status-url": "https://status.npmjs.org/api/v2/status.json",
     "icon-url": "./assets/images/logos/npm.png"
+  },
+  "Heroku": {
+    "status-url": "https://status.heroku.com/api/v3/current-status",
+    "icon-url": "https://www.herokucdn.com/favicons/favicon.ico"
   },
   "SauceLabs": {
     "status-url": "https://status.saucelabs.com/api/v2/status.json",
     "icon-url": "./assets/images/logos/saucelabs.png"
   },
-  "Heroku": {
-    "status-url": "https://status.heroku.com/api/v3/current-status",
-    "icon-url": "./assets/images/logos/heroku.ico"
+  "Claude": {
+    "status-url": "https://status.claude.com/api/v2/status.json",
+    "icon-url": "./assets/images/logos/claude.png"
+  },
+  "TravisCI": {
+    "status-url": "https://www.traviscistatus.com/api/v2/status.json",
+    "icon-url": "./assets/images/logos/travis-ci.png"
   }
 }
